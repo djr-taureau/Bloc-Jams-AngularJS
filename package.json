@@ -1,15 +1,14 @@
 
 {
-  "name": "bloc-jams-angularjs",
+  "name": "bloc-frontend-project-starter",
   "version": "0.0.2",
-  "description": "Block Jams Angular",
+  "description": "Starter project for the Bloc Frontend Web Development",
   "repository": {
     "type": "git",
-    "url": "https://github.com/djr-taureau/Bloc-Jams-AngularJS"
+    "url": "https://github.com/bloc/bloc-frontend-project-starter"
   },
   "main": "server.js",
   "scripts": {
-    "postinstall": "ng build --aot -prod",
     "start": "node server.js"
   },
   "author": "Bloc Inc",
@@ -26,8 +25,7 @@
     "grunt-contrib-clean": "~0.6.0",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-hapi": "^0.8.1",
-    "@angular/cli": "1.2.3"
+    "grunt-hapi": "^0.8.1"
   }
 }
 
