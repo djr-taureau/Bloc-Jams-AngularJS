@@ -1,12 +1,13 @@
 (function(){
-    AlbumCtrl.$inject = ['$log','Fixtures','SongPlayer'];
+    //AlbumCtrl.$inject = ['$log','Fixtures','SongPlayer'];
     function AlbumCtrl($log, Fixtures, SongPlayer){
-        $log.debug(this.albumData = Fixtures.getAlbum());
+        this.albumData = Fixtures.getAlbum();
+        this.songPlayer = SongPlayer;
         
     }
 
     angular
         .module('blocJams')
-        .controller('AlbumCtrl', AlbumCtrl)
+        .controller('AlbumCtrl', ['$log', 'Fixtures', 'SongPlayer',  AlbumCtrl])
 
 })();
