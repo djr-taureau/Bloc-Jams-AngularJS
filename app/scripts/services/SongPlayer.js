@@ -93,6 +93,12 @@
      * @desc public method of SongPlayer that checks if there is a current song playing * * and then calls the setSong and playSong functions if not. also calls playSong if * * the current song is paused
      * @param {object} song
      */
+
+    /**
+	* @desc holds the value of the volume
+	* @type {Number}
+	*/
+	SongPlayer.volume = null;
     
     SongPlayer.play = function(song) {
         song = song || SongPlayer.currentSong;
@@ -167,6 +173,17 @@
              if (currentBuzzObject) {
                 currentBuzzObject.setTime(time);
              }
+        };
+
+         /**
+		 * @function setVolume
+		 * @desc Set Volume  of currently playing song
+		 * @param {Number} volume
+		 */
+		 SongPlayer.setVolume = function(volume) {
+            if (currentBuzzObject) {
+                currentBuzzObject.setVolume(volume);
+            }
         };
         
         return SongPlayer;
