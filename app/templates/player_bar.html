@@ -1,31 +1,32 @@
  <section class="player-bar" ng-controller="PlayerBarCtrl as playerBar">
      <div class="container">
+         <pre ng-init="debug=true" ng-click="debug = !debug" ng-if="debug">{{ playerBar | json }}</pre>
          <div class="control-group main-controls">
-             <a class="previous" ng-click="playerBar.songPlayer.previous()">
-                 <span class="ion-skip-backward"></span>
+             <a class="previous" ng-click="playerBar.SongPlayer.previous()">
+                <span class="ion-skip-backward"></span>
              </a>
              <a class="play-pause">
                  <span class="ion-play"
-                       ng-show="!playerBar.SongPlayer.currentSong.playing"
-                       ng-click="playerBar.songPlayer.play()">
+                       ng-show="!playerBar.asdfasdfSongPlayer.currentSong.playing"
+                       ng-click="playerBar.SongPlayer.play()">
                  </span>
                  <span class="ion-pause"
-                       ng-show="playerBar.songPlayer.currentSong.playing"
-                       ng-click="playerBar.songPlayer.pause()">
+                       ng-show="playerBar.SongPlayer.currentSong.playing"
+                       ng-click="playerBar.SongPlayer.pause()">
                 </span>
              </a>
-             <a class="next">
-                 <span class="ion-skip-forward"></span>
+             <a class="next" ng-click="playerBar.SongPlayer.next()">
+                <span class="ion-skip-forward"></span>
              </a>
          </div>
          <div class="control-group currently-playing">
-             <h2 class="song-name">{{ playerBar.albumData.songs[playerBar.songPlayer.getSongIndex(playerBar.songPlayer.currentSong)].name }}</h2>
-             <h2 class="artist-song-mobile"></h2>
+             <h2 class="song-name">{{ playerBar.SongPlayer.currentSong.title }}</h2>
+             <h2 class="artist-song-mobile">{{ playerBar.SongPlayer.currentSong.title }}</h2>
              <h3 class="artist-name">{{ playerBar.albumData.artist }}</h3>
              <div class="seek-control">
                 <seek-bar></seek-bar>
                  <div class="current-time"></div>
-                 <div class="total-time">{{ playerBar.albumData.songs[playerBar.songPlayer.getSongIndex(playerBar.songPlayer.currentSong)].length }}</div>
+                 <div class="total-time">{{ playerBar.albumData.songs[playerBar.SongPlayer.getSongIndex(playerBar.SongPlayer.currentSong)].length }}</div>
              </div>
          </div>
          <div class="control-group volume">
