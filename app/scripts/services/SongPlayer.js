@@ -172,7 +172,7 @@
         SongPlayer.setCurrentTime = function(time) {
              if (currentBuzzObject) {
                 currentBuzzObject.setTime(time);
-             }
+             } 
         };
 
          /**

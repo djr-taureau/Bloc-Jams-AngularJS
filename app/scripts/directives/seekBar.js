@@ -17,7 +17,7 @@
             scope: {
                 onChange: '&'
             },
-            link: function(scope, element, attributes){
+            link: function(scope, element, attributes) {
                 scope.value = 0;
                 scope.max = 100;
 
@@ -40,6 +40,10 @@
 
                 scope.fillStyle = function() {
                     return {width: percentString()};
+                };
+
+                scope.thumbStyle = function() {
+                    return {left: percentString()};
                 };
 
                 scope.onClickSeekBar = function(event) {
