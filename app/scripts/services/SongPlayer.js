@@ -98,7 +98,7 @@
 	* @desc holds the value of the volume
 	* @type {Number}
 	*/
-	SongPlayer.volume = null;
+	SongPlayer.volume = 50;
     
     SongPlayer.play = function(song) {
         song = song || SongPlayer.currentSong;
